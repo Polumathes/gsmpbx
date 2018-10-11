@@ -42,7 +42,7 @@ function resetUsers(cb){
     //   user.number = "sip:" + user.number + "@" + config.twilio.sipDomain;
     //   USERS.push(user); 
     // });
-    user.forEach(function(user) {
+    users.forEach(function(user) {
       USERS.push(user);
     });
     return cb();

@@ -30,11 +30,11 @@ function resetUsers(cb){
     let users = [
       {
         text: "jamison",
-        number: "sip:19164356150@gsm.sip.us1.twilio.com"
+        number: "sip:jamison@gsm.sip.us1.twilio.com"
       },
       {
         text: "matt",
-        number: "sip:19164356120@gsm.sip.us1.twilio.com"
+        number: "sip:matt@gsm.sip.us1.twilio.com"
       }
     ];
     // users.forEach(function(user){

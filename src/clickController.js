@@ -27,26 +27,25 @@ const colectionStructure = {
 let USERS = [];
 
 function resetUsers(cb){
-  request({
-    url: config.usersUrl,
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Accept-Charset': 'utf-8'
-    }
-  }, function (err, response, body){
-    if (err) {
-      return cb(err);
-    }
-    let users = JSON.parse(body).users;
-    USERS = [];
-    users.forEach(function(user){
-      user.text = user.number;
-      user.number = "sip:" + user.number + "@" + config.twilio.sipDomain;
-      USERS.push(user); 
+    let users = [
+      {
+        text: "jamison",
+        number: "sip:jamison@gsm.sip.twilio.com"
+      },
+      {
+        text: "matt",
+        number: "sip:matt@gsm.sip.twilio.com"
+      }
+    ];
+    // users.forEach(function(user){
+    //   user.text = user.number;
+    //   user.number = "sip:" + user.number + "@" + config.twilio.sipDomain;
+    //   USERS.push(user); 
+    // });
+    user.forEach(function(user) {
+      USERS.push(user);
     });
     return cb();
-  });
 }
 
 resetUsers(function(err){});
